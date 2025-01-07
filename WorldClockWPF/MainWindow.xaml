@@ -1,0 +1,38 @@
+﻿<Window x:Class="WorldClockWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldClockWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="375" Width="773" ResizeMode="NoResize" SizeToContent="Manual">
+    <Grid Margin="0,0,0,8">
+        <Label Content="World Clock" HorizontalAlignment="Left" Margin="56,0,0,0" VerticalAlignment="Top" Height="40" Width="117" FontSize="16" FontWeight="Bold" Foreground="White" Background="#C24356" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="La hora actual en Pekín, China es" HorizontalAlignment="Left" Margin="56,58,0,0" VerticalAlignment="Top" Width="718" FontSize="20"/>
+        <Label Name="CurrentTimeLabel" Content="23:59:59" HorizontalAlignment="Center" Height="122" Margin="0,95,0,0" VerticalAlignment="Top" Width="392" FontWeight="Bold" FontSize="90" Foreground="#333333" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Lunes, Enero 6, 2025" HorizontalAlignment="Right" Margin="0,222,53,0" VerticalAlignment="Top" Width="526" FontSize="20" HorizontalContentAlignment="Right"/>
+        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,371,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14">
+                <TextBlock.Inlines>
+                    <Run Text="Quito" FontWeight="Bold"/>
+                    <LineBreak/>
+                    <Run Text="15:26"/>
+                </TextBlock.Inlines>
+            </TextBlock>
+        </Label>
+        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,282,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Barcelona" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+        </Label>
+        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,193,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Miami" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+        </Label>
+        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,104,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Manila" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+        </Label>
+        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,15,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Filipinas" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+        </Label>
+
+
+    </Grid>
+</Window>
