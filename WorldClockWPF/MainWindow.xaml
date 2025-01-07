@@ -19,7 +19,29 @@
         </Label>
         <Label Name="CurrentTimeLabel" Content="23:59:59" HorizontalAlignment="Center" Height="122" Margin="0,95,0,0" VerticalAlignment="Top" Width="392" FontWeight="Bold" FontSize="90" Foreground="#333333" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Name="DateLabel" Content="Lunes, 6  de Enero, 2025" HorizontalAlignment="Right" Margin="0,222,15,0" VerticalAlignment="Top" Width="526" FontSize="22" HorizontalContentAlignment="Right"/>
-        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,371,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+        <Label Name="lblCity1" HorizontalAlignment="Right" Height="44" Margin="0,287,371,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#999999" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Label.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#EEEEEE" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="#333333" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
             <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14">
                 <TextBlock.Inlines>
                     <Run Text="Quito" FontWeight="Bold"/>
@@ -28,17 +50,129 @@
                 </TextBlock.Inlines>
             </TextBlock>
         </Label>
-        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,282,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
-            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Barcelona" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+
+        <!-- Label para Barcelona -->
+        <Label Name="lblCity2" HorizontalAlignment="Right" Height="44" Margin="0,287,282,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#999999" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Label.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#EEEEEE" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="#333333" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14">
+                <Run Text="Barcelona" FontWeight="Bold"/>
+                <LineBreak/>
+                <Run Text="15:26"/>
+            </TextBlock>
         </Label>
-        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,193,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
-            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Miami" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+
+        <!-- Label para Miami -->
+        <Label Name="lblCity3" HorizontalAlignment="Right" Height="44" Margin="0,287,193,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#999999" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Label.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#EEEEEE" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="#333333" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14">
+                <Run Text="Miami" FontWeight="Bold"/>
+                <LineBreak/>
+                <Run Text="15:26"/>
+            </TextBlock>
         </Label>
-        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,104,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
-            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Manila" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+
+        <!-- Label para Manila -->
+        <Label Name="lblCity4" HorizontalAlignment="Right" Height="44" Margin="0,287,104,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#999999" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Label.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#EEEEEE" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="#333333" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14">
+                <Run Text="Manila" FontWeight="Bold"/>
+                <LineBreak/>
+                <Run Text="15:26"/>
+            </TextBlock>
         </Label>
-        <Label HorizontalAlignment="Right" Height="44" Margin="0,287,15,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
-            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14"><Run Text="Filipinas" FontWeight="Bold"/><LineBreak/><Run Text="15:26"/></TextBlock>
+
+        <!-- Label para Filipinas -->
+        <Label Name="lblCity5" HorizontalAlignment="Right" Height="44" Margin="0,287,15,0" VerticalAlignment="Top" Width="84" Background="#EEEEEE">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Label.MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#999999" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="White" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Label.MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ColorAnimation To="#EEEEEE" Storyboard.TargetProperty="(Label.Background).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                    <ColorAnimation To="#333333" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.2"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+            <TextBlock Foreground="#333333" TextAlignment="Right" Width="74" FontSize="14">
+                <Run Text="Filipinas" FontWeight="Bold"/>
+                <LineBreak/>
+                <Run Text="15:26"/>
+            </TextBlock>
         </Label>
 
 
